@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="propertyModel"
+            type="com.example.municipal.model.PropertyDemand" />
+        <variable
+            name="myData"
+            type="com.example.municipal.model.TradeLicense" />
+        <import type="com.example.municipal.util.DateTimeUtil"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_50sdp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp">
+
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Trade License`}"
+                bind:valueText="@{myData.uniqueId}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Ownser(s)`}"
+                bind:valueText="@{myData.ownerName}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Mobile`}"
+                bind:valueText="@{myData.mobileNo}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`BuiltUpArea`}"
+                bind:valueText="@{String.valueOf(myData.builtUpArea)}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Licence Issue date`}"
+                bind:valueText="@{DateTimeUtil.INSTANCE.getDateOnly(myData.licenseDate)}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Licence Expire date`}"
+                bind:valueText="@{DateTimeUtil.INSTANCE.getDateOnly(myData.licenseExpiryDate)}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Business Type`}"
+                bind:valueText="@{myData.ref.tradeLicenseBusinessType.name}"
+                />
+            <include
+                layout="@layout/item_new_assesment"
+                bind:levelText="@{`Category Type`}"
+                bind:valueText="@{myData.ref.tradeLicenseCategoryType.name}"
+                />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/lay_address"
+                layout="@layout/item_user_asses_address"
+                bind:propertyModel="@{propertyModel}"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

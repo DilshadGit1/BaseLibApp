@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_large">22sp</dimen>
+
+    <dimen name="layout_margin_default">10dp</dimen>
+    <dimen name="layout_padding_default">10dp</dimen>
+    <dimen name="header_img_size">70dp</dimen>
+    <dimen name="divider_height">0.5dp</dimen>
+
+    <dimen name="nav_drawer_width">235dp</dimen>
+    <dimen name="_1sdp">3.60dp</dimen>
+    <dimen name="_70sdp">252.00dp</dimen>
+    <dimen name="_71sdp">255.60dp</dimen>
+    <dimen name="_72sdp">259.20dp</dimen>
+    <dimen name="_73sdp">262.80dp</dimen>
+    <dimen name="header_font_size">14sp</dimen>
+    <dimen name="paddingItemDecorationDefault">8dp</dimen>
+    <dimen name="paddingItemDecorationEdge">24dp</dimen>
+    <dimen name="activity_margin_content">24dp</dimen>
+    <dimen name="activity_margin_half">8dp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dots_height">35dp</dimen>
+    <dimen name="dots_margin_bottom">40dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+    <dimen name="tab_spacing_half">5dp</dimen>
+
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="levelText"
+            type="String" />
+        <variable
+            name="valueText"
+            type="String" />
+        <variable
+            name="hintText"
+            type="String" />
+        <variable
+            name="isEdEnabled"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_value_title"
+                android:fontFamily="@font/poppinsregular_400"
+                android:textFontWeight="700"
+                android:text="@{levelText}"
+                android:textColor="@color/cardview_back2"
+                android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:id="@+id/ed_value"
+                    android:text="@{valueText}"
+                    android:hint="@{hintText}"
+                    android:textColorHint="@color/black_trans"
+                    android:enabled="false"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:textColor="#848891"
+                    android:textFontWeight="500"
+                    android:backgroundTint="#e9ecef"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

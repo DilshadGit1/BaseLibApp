@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="levelText"
+            type="String" />
+        <variable
+            name="valueText"
+            type="String" />
+        <variable
+            name="hintText"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                android:visibility="gone"
+                android:fontFamily="@font/poppinsregular_400"
+                android:textFontWeight="900"
+                android:text="PROPERTY DETAILS"
+                android:textColor="#555f78"
+                android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_value_title"
+                android:fontFamily="@font/poppinsregular_400"
+                android:textFontWeight="700"
+                android:text="@{levelText}"
+                android:textColor="@color/cardview_back2"
+                android:textSize="@dimen/_8sdp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/mobilenoback"
+                android:backgroundTint="#eaedf2"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/total_house"
+                    android:background="@drawable/custom_image_back"/>
+                <com.example.municipal.common.CustomSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:id="@+id/sp_value"
+                    android:theme="@style/customSpinnerDialog"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:textColor="#848893"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

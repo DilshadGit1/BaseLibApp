@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Data Found"
+            android:layout_centerInParent="true"
+            android:textColor="@color/black"/>
+        <RelativeLayout
+            android:layout_below="@+id/card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_trans"
+           >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_add"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_65sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+            <ImageView
+                android:id="@+id/addfloor"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/add_icon"/>
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/layout_save"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="@dimen/_10sdp">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnsave"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/alert_button"-->
+<!--                android:padding="@dimen/_10sdp"-->
+<!--                android:paddingStart="@dimen/_30sdp"-->
+<!--                android:paddingEnd="@dimen/_30sdp"-->
+<!--                android:text="SAVE"-->
+<!--                android:textColor="@color/back"-->
+<!--                android:textSize="@dimen/_15sdp" />-->
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/bottom_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@android:style/Widget.DeviceDefault.Light.Button.Borderless.Small">
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/newback" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/newforword"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_25sdp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/login_background">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:textFontWeight="700"
+                    android:text="Signin"
+                    android:textColor="#1f2474"
+                    android:textSize="@dimen/_25sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:text="Login to continue."
+                    android:textColor="#c5a568"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/txt_timeout_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:fontFamily="@font/montserratregular"
+                    android:text="Your session has timed out. please log in again"
+                    android:textColor="@color/redcolor"
+                    android:textFontWeight="200"
+                    android:visibility="gone"
+                    android:textSize="@dimen/_11sdp" />
+                <LinearLayout
+                    android:id="@+id/laylogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_110sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select Municipal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp"
+                            android:textColor="#c7a469"
+                            android:fontFamily="@font/poppinsregular_400"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/mobilenoback"
+                            android:backgroundTint="#1f2475"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_2sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#c7a469"
+                            android:layout_gravity="center"
+                            android:textSize="@dimen/_10sdp"
+                            android:fontFamily="@font/poppinslight_300"
+                            android:text="Device Id"
+                            />
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:src="@drawable/verison"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_3sdp"/>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        app:cardBackgroundColor="#1a2a4c"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardElevation="10dp"
+                        android:layout_margin="@dimen/_5sdp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+                            <ImageView
+                                android:id="@+id/ivuser"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/municipal" />
+
+
+                            <com.example.municipal.common.CustomSpinner
+                                android:id="@+id/spinner_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@id/ivuser"
+                                android:background="@null"
+                                android:backgroundTint="@color/white"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                android:theme="@style/mySpinnerItemStyle" />
+                            <ImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/dropdown" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/subcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        app:cardBackgroundColor="#1a2a4c"
+                        android:visibility="gone"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardElevation="10dp"
+                        android:layout_margin="@dimen/_5sdp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+                            <ImageView
+                                android:id="@+id/ivusersub"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/municipal" />
+
+                            <com.example.municipal.common.CustomSpinner
+                                android:id="@+id/spinner_loginsub"
+                                android:layout_toRightOf="@id/ivusersub"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:background="@null"
+                                android:theme="@style/mySpinnerItemStyle"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                />
+                            <ImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/dropdown" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/loginvia_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        app:cardBackgroundColor="#1a2a4c"
+                        android:visibility="visible"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardElevation="10dp"
+                        android:layout_margin="@dimen/_5sdp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp">
+                            <ImageView
+                                android:id="@+id/ivloginvia"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:src="@drawable/pin" />
+
+
+                            <com.example.municipal.common.CustomSpinner
+                                android:id="@+id/spinner_loginvia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_toRightOf="@id/ivloginvia"
+                                android:background="@null"
+                                android:backgroundTint="@color/white"
+                                android:hint=""
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+                            <ImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_20sdp"
+                                android:backgroundTint="@color/white"
+                                android:background="@drawable/dropdown" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#c7a469"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Enter Credentials"
+                        android:fontFamily="@font/poppinsregular_400"/>
+
+                    <RelativeLayout
+                        android:id="@+id/lay_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:background="@drawable/mobilenoback">
+
+                        <ImageView
+                            android:id="@+id/ivflag"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/user" />
+
+
+                        <EditText
+                            android:id="@+id/edmobileno"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toRightOf="@id/ivflag"
+                            android:background="@null"
+                            android:ems="10"
+                            android:fontFamily="@font/poppinsregular_400"
+                            android:hint="Enter Username or ID"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textFontWeight="200"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/lay_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/mobilenoback">
+
+                        <ImageView
+                            android:id="@+id/ivpwd_icon"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/password" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/ivpwd_icon"
+                            android:layout_centerVertical="true"
+                            app:endIconTint="@color/white"
+                            app:endIconDrawable="@drawable/ic_showhide_password"
+                            app:endIconMode="password_toggle"
+                            app:hintEnabled="false"
+                            >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edPwd"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_toRightOf="@id/ivpwd_icon"
+                                android:ems="10"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:background="@drawable/mobilenoback"
+                                android:fontFamily="@font/poppinsregular_400"
+                                android:hint="@string/Enter_Password"
+                                android:inputType="textPassword"
+                                android:password="true"
+                                android:maxLength="30"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textFontWeight="200"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/_8sdp">
+                        <TextView
+                            android:id="@+id/text_otp_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppinsregular_400"
+                            android:textColor="#666668"
+                            android:textSize="@dimen/_13sdp"
+                            android:textFontWeight="300"
+                            android:visibility="invisible"
+                            android:text="A 4 digit OTP will be sent via sms to\nverify your mobile number"/>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/laynext"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/mobilenoback"
+                        android:backgroundTint="#2d54ef"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_35sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tvsubmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppinsregular_400"
+                            android:text="Next"
+                            android:textColor="@color/white"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_15sdp" />
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/next"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

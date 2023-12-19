@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="android:fontFamily"
+        tools:ignore="ExtraText">sans-serif</item>
+    <item name="android:textStyle">normal</item>
+
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textStyle">bold</item>
+</font-family>

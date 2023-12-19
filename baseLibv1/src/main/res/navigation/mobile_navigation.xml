@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.municipal.ui.dashboard.DashboardFragment"
+        android:label="Dashboard" />
+    <fragment
+        android:id="@+id/demandFragment"
+        android:name="com.example.municipal.ui.demand.DemandFragment"
+        android:label="Demand" />
+    <fragment
+        android:id="@+id/paymentHistoryFragment"
+        android:name="com.example.municipal.ui.payment.PaymentHistoryFragment"
+        android:label="PaymentHistory" />
+    <fragment
+        android:id="@+id/newAssesmentFragment"
+        android:name="com.example.municipal.ui.newassesment.NewAssessmentFragment"
+        android:label="New Assesment" />
+    <dialog
+        android:id="@+id/addOwnerDetailsDialogFragment"
+        android:name="com.example.municipal.ui.newassesment.AddOwnerDetailsDialogFragment"
+        android:label="" />
+    <dialog
+        android:id="@+id/addFloorDetailsDialogFragment"
+        android:name="com.example.municipal.ui.newassesment.AddFloorDetailsDialogFragment"
+        android:label="AddFloorDetails" />
+    <fragment
+        android:id="@+id/propertyTabFragment"
+        android:name="com.example.municipal.ui.propertyList.PropertyTabFragment"
+        android:label="Property List" />
+    <fragment
+        android:id="@+id/basicTabFragment"
+        android:name="com.example.municipal.ui.basicdetails.BasicTabFragment"
+        android:label="Property Details" />
+    <fragment
+        android:id="@+id/collectionListFragment"
+        android:name="com.example.municipal.ui.mycollection.MyCollectionListFragment"
+        android:label="My Collection List" />
+    <fragment
+        android:id="@+id/usesChargeCategoryTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.category.UsesChargeCategoryTabFrag"
+        android:label="UserChargeCategory" />
+    <fragment
+        android:id="@+id/usesRateMasterTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.rateMaster.UsesRateMasterTabFrag"
+        android:label="UsesRateMaster" />
+    <fragment
+        android:id="@+id/usesNewAssessmentTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.newAssesmentV1.UsesNewAssessmentTabFrag"
+        android:label="UsesNewAssessment" />
+    <fragment
+        android:id="@+id/tradeLicenceTabFrag"
+        android:name="com.example.municipal.ui.tradeLicense.TradeLicenceTabFrag"
+        android:label="TradeLicence" />
+    <fragment
+        android:id="@+id/tradeLicenceSignatureFrag"
+        android:name="com.example.municipal.ui.tradeLicense.TradeLicenceSignatureFrag"
+        android:label="TradeLicenceSignature" />
+    <fragment
+        android:id="@+id/tradeLicenceViewBasicFrag"
+        android:name="com.example.municipal.ui.tradeLicense.TradeLicenceViewBasicFrag"
+        android:label="TradeLicenceViewBasic" />
+    <fragment
+        android:id="@+id/tradeLicenceViewTabFrag"
+        android:name="com.example.municipal.ui.tradeLicense.TradeLicenceViewTabFrag"
+        android:label="TradeLicenceView" />
+    <fragment
+        android:id="@+id/usesChargeListTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.userChargeList.UsesChargeListTabFrag"
+        android:label="UsesChargeList" />
+    <fragment
+        android:id="@+id/usesChargeListViewTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.userCharge.UsesChargeListViewTabFrag"
+        android:label="UsesChargeListView" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.municipal.ui.profile.ProfileFragment"
+        android:label="Profile" />
+    <fragment
+        android:id="@+id/userChargeNewAssesmentFragment"
+        android:name="com.example.municipal.ui.userChargeManagement.newAssesmentV2.UserChargeNewAssesmentFragment"
+        android:label="UserChargeNewAssesment" />
+    <fragment
+        android:id="@+id/userChargeCollectionTabFrag"
+        android:name="com.example.municipal.ui.userChargeManagement.collection.UserChargeCollectionTabFrag"
+        android:label="UserChargeCollection" />
+</navigation>

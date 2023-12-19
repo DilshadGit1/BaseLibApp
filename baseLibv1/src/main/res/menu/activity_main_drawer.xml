@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icons8_dashboard"
+            android:title="Dashboard" />
+
+    </group>
+
+    <item
+        android:id="@+id/property_management"
+        android:title="PROPERTY MANAGEMENT"
+        android:visible="false"
+        >
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_property_list"
+                android:icon="@drawable/icons8_add_properties"
+                android:title="Property List" />
+            <item
+                android:id="@+id/nav_collection_list"
+                android:icon="@drawable/icons8_bribery"
+                android:title="My Collection" />
+            <item
+                android:id="@+id/nav_demand_list"
+                android:icon="@drawable/demand"
+                android:title="Demands" />
+
+            <item
+                android:id="@+id/new_assesment"
+                android:icon="@drawable/icons8_add_properties"
+                android:title="New Assessment" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/user_charge_management"
+        android:title="USER CHARGE MANAGEMENT"
+        android:visible="false"
+        >
+
+        <menu>
+
+
+            <item
+                android:id="@+id/user_charge_category"
+                android:icon="@drawable/icons8_admin_settings_male"
+                android:title="User Charge Category"
+                android:visible="false"
+                />
+            <item
+                android:id="@+id/rate_master"
+                android:icon="@drawable/icons8_master"
+                android:title="Rate Master"
+                android:visible="false"
+                />
+            <item
+                android:id="@+id/uc_new_assesment_v1"
+                android:icon="@drawable/icons8_add_properties"
+                android:title="User Charge New Assessment"
+                android:visible="false"
+                />
+            <item
+                android:id="@+id/uc_new_assesment_v2"
+                android:icon="@drawable/icons8_collectibles"
+                android:title="User Charge New Assessment"
+                android:visible="false"
+                />
+            <item
+                android:id="@+id/user_charge_list"
+                android:icon="@drawable/icons8_checked_usermale"
+                android:title="User Charge List" />
+            <item
+                android:id="@+id/collection"
+                android:icon="@drawable/icons8_collectibles"
+                android:title="Collection" />
+
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/trade_license_mgmt"
+        android:title="Trade License Mangement"
+        android:visible="false"
+        >
+        <menu>
+            <item
+                android:id="@+id/tl_search"
+                android:icon="@drawable/search"
+                android:title="Search" />
+        </menu>
+
+    </item>
+
+
+    <item android:title=""
+        >
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/icons8_logout"
+                    android:title="Logout" />
+            </group>
+        </menu>
+
+    </item>
+</menu>

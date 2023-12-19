@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="receiptNoLevel"
+            type="String" />
+
+        <variable
+            name="payModeLevel"
+            type="String" />
+
+        <variable
+            name="b_propertyNo"
+            type="String" />
+        <variable
+            name="b_status"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:background="@drawable/ract_green"
+            android:backgroundTint="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            android:elevation="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="vertical"
+                >
+                <include
+                    android:id="@+id/lay_state"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`State`}"
+                    android:visibility="gone"
+                    />
+
+                <include
+                    android:id="@+id/lay_dist"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`District`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_village"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`City/Village`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_zone"
+                    layout="@layout/item_new_asses_with_spinner"
+                    bind:levelText="@{`Zone`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_ward"
+                    layout="@layout/item_new_asses_with_spinner"
+                    bind:levelText="@{`Ward`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_pay_mod"
+                    layout="@layout/item_new_asses_with_spinner"
+                    bind:levelText="@{!payModeLevel.isEmpty()?payModeLevel:`Payment Made At.`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_collector"
+                    layout="@layout/item_new_asses_with_spinner"
+                    bind:levelText="@{`Collector`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_fin_year"
+                    layout="@layout/item_new_asses_with_spinner"
+
+                    bind:levelText="@{`Financial Year`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_propertyNo"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{b_propertyNo.isEmpty ? `Property No.`:b_propertyNo}"
+                    bind:isEdEnabled="@{true}"
+                    />
+                <include
+                    android:id="@+id/lay_dateFrom"
+                    layout="@layout/item_new_asses_with_date"
+
+                    bind:levelText="@{`Date From`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_dateTo"
+                    layout="@layout/item_new_asses_with_date"
+                    bind:levelText="@{`Date To`}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_holdingNo"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`Holding No.`}"
+                    bind:isEdEnabled="@{true}"
+                    />
+                <include
+                    android:id="@+id/lay_receiptNo"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{!receiptNoLevel.isEmpty()?receiptNoLevel:`Receipt No.`}"
+                    bind:isEdEnabled="@{true}"
+                    />
+                <include
+                    android:id="@+id/lay_ownerName"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`Owner Name`}"
+                    bind:isEdEnabled="@{true}"
+                    />
+                <include
+                    android:id="@+id/lay_mobile_no"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`Mobile No`}"
+                    bind:isEdEnabled="@{true}"
+                    />
+                <include
+                    android:id="@+id/lay_old_holdingNo"
+                    layout="@layout/item_new_assesment"
+                    bind:levelText="@{`Old Holding No`}"
+                    bind:isEdEnabled="@{true}"
+                    android:visibility="gone"
+                    />
+                <include
+                    android:id="@+id/lay_status"
+                    layout="@layout/item_new_asses_with_spinner"
+                    bind:levelText="@{b_status.isEmpty?`Status`:b_status}"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btn_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:backgroundTint="@color/light_green"
+                        android:textColor="@color/white"
+                        android:background="@drawable/ract_white"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinsregular_400"
+                        android:padding="@dimen/_10sdp"/>
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reset"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:backgroundTint="@color/graycolor"
+                        android:textColor="@color/black"
+                        android:background="@drawable/ract_white"
+                        android:textSize="@dimen/_10sdp"
+                        android:fontFamily="@font/poppinsregular_400"
+                        android:padding="@dimen/_10sdp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

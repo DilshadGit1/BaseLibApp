@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="propertyModel"
+            type="com.example.municipal.model.PropertyDemand" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_5sdp"
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/PropertyHouse_No"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Property/House No`}"
+            bind:valueText="@{propertyModel.address.no}"
+            />
+        <include
+            android:id="@+id/Plot_No"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Plot No`}"
+            bind:valueText="@{propertyModel.address.plotNo}"
+            />
+        <include
+            android:id="@+id/Khata_No"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Khata No`}"
+            bind:valueText="@{propertyModel.address.khataNo}"
+            />
+        <include
+            android:id="@+id/Khasra_No"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Khasra_No`}"
+            bind:valueText="@{propertyModel.address.khasraNo}"
+            />
+        <include
+            android:id="@+id/Address_Line1"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Address Line 1`}"
+            bind:valueText="@{propertyModel.address.al1}"
+            />
+        <include
+            android:id="@+id/Address_Line2"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Address Line 2`}"
+            bind:valueText="@{propertyModel.address.al2}"
+            />
+        <include
+            android:id="@+id/State"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`State`}"
+            bind:valueText="@{propertyModel.ref.address.state.name}"
+            />
+        <include
+            android:id="@+id/District"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`District`}"
+            bind:valueText="@{propertyModel.ref.address.district.name}"
+            />
+        <include
+            android:id="@+id/City_Village"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`City/Village`}"
+            bind:valueText="@{propertyModel.ref.address.village.name}"
+            />
+        <include
+            android:id="@+id/Zone"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Zone`}"
+            bind:valueText="@{propertyModel.ref.address.zone.name}"
+            />
+        <include
+            android:id="@+id/Ward"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Ward`}"
+            bind:valueText="@{propertyModel.ref.address.ward.name}"
+            />
+        <include
+            android:id="@+id/Pincode"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Pincode`}"
+            bind:valueText="@{propertyModel.address.postalCode}"
+            />
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

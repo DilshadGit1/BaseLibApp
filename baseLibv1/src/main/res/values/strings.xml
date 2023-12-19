@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name">Municipal-Tax UP</string>
+    <string name="app_name_dev">Municipal-Tax UP Dev</string>
+    <string name="splash1">Find your Property and Pay Property Tax Online hassle free.</string>
+
+    <style name="card1">ARR. &amp; CURR. Total Demand</style>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="alert_delete">Do you want to delete  /nthis Record!!!</string>
+    <string name="password">Password</string>
+    <string name="user_name_required">User Name Required.</string>
+    <string name="valid_user_name">Valid User Name Required.</string>
+    <string name="password_required">Password Required.</string>
+    <string name="mobile">Mobile Number Required</string>
+    <string name="google_play_services">Google play services are not available.</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="title_home">Farmer</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="exit">Do you want to exit?</string>
+    <string name="ok">OK</string>
+    <string name="enter_mobile_no">Enter mobile no</string>
+    <string name="enter_mpin_">Enter M-pin</string>
+    <string name="enter_user_name_or_id">Enter username/id</string>
+    <string name="latlog">Lat&amp;Long</string>
+    <string name="text11">This card is property of Logikoof Technologies Pvt Ltd. Loss of this card should immediately be reported to the security department.</string>
+    <string name="text12">If you found please return to the below address.</string>
+
+    <!--    <string name="checkbox1">I/We hereby declare that the above information and property tax assesment based there one
+    is coreect to the best of my/our knowledge and belief and I/We undertake to abide by the relevant provisions
+    of the Bihar Municipal Act 2007.</string>-->
+    <!-- <string name="checkbox2">I/We fully understand that any informaition furnished above, if proved incorrect or false will
+    render me/us liable for penal action or other consequences as may be prescribed in Laws, Rules or Regulations
+    framed by Govt. of Bihar of Municipality.</string>
+
+   -->
+    <string name="cancel">Cancel</string>
+    <string name="label_mobile">Mobile</string>
+    <string name="hint_farmer_list_search">Search Name</string>
+    <string name="submit">Submit</string>
+    <string name="name">Name</string>
+    <string name="name_required">Name Required</string>
+    <string name="father_name_required">Father Name Required</string>
+    <string name="gender_required">Gender Required</string>
+    <string name="mobile_number_required">Mobile Number Required</string>
+    <string name="date_of_birthh">Date of Birth*</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="date_of_birth_required">Date Of birth Required</string>
+    <string name="query">Query</string>
+    <string name="organisation">Organisation</string>
+    <string name="state">State</string>
+    <string name="statee">State*</string>
+    <string name="Enter_your_Mobile_number">Enter Username/Mobile Number</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="search_user_event">Search By Name</string>
+    <string name="projects">Projects :</string>
+    <string name="basic_details">Basic Details</string>
+    <string name="type">Type</string>
+    <string name="content">Content</string>
+    <string name="record_id">Record ID</string>
+    <string name="id">ID</string>
+    <string name="search_content">Search Content</string>
+    <string name="content_url">Content Url</string>
+    <string name="bluetooth_devices">Bluetooth Devices</string>
+    <string name="bluetooth_not_supported">Bluetooth not supported!!</string>
+    <string name="getting_all_bluetooth_devices">Getting all available Bluetooth Devices</string>
+    <string name="printer_connecting">Connecting to</string>
+    <string name="can_not_establish_connection">Cannot establish connection</string>
+    <string name="launguage_selection">Language Selection</string>
+    <string name="date">Date</string>
+    <string name="add_query_button_caption">Add</string>
+    <string name="enter_query">Enter Query</string>
+    <string name="add_query_caption">Query*</string>
+    <string name="enter_query_title">Enter Title</string>
+    <string name="title_add_query">Title*</string>
+    <string name="finish">Finish</string>
+    <string name="user_name">User Name</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="father_husband_name">Father/Husband Name</string>
+    <string name="designation">Designation</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+
+
+    <string name="Spouse_Name">Spouse Name</string>
+    <string name="Aadhaar_Number">Aadhaar Number</string>
+    <string name="Education">Education</string>
+    <string name="Land_Line_No.">Land Line No</string>
+    <string name="Alternate_Number">Alternate Number</string>
+    <string name="Number_Of_Mobile">No. of Mobile</string>
+    <string name="Door_Number">Door Number</string>
+    <string name="Street">Street</string>
+    <string name="Landmark">Landmark</string>
+    <string name="Village">Village</string>
+    <string name="Gram_Panchyat">Gram Panchyat</string>
+    <string name="Gram_Panchyatt">Gram Panchyat*</string>
+    <string name="Block">Block</string>
+    <string name="Blockk">Block*</string>
+    <string name="District">District</string>
+    <string name="Districtt">District*</string>
+    <string name="Other_Details">Other Details</string>
+    <string name="Have_you_availed_credit">Have you availed credit?</string>
+    <string name="Membership_in_MGNREGA">Membership in MGNREGA?</string>
+    <string name="CBO_memberes">CBO memberes</string>
+    <string name="Do_you_have_kitchen_qarden">Do you have kitchen qarden?</string>
+    <string name="Like_to_recieve_SMS">Like to recieve SMS</string>
+    <string name="Like_to_recieve_Voice_Calls">Like to recieve Voice Calls</string>
+    <string name="Query_Type">Query Type</string>
+    <string name="Resolution">Resolution</string>
+    <string name="Resolved_Date">Resolved Date</string>
+    <string name="Solution">Solution</string>
+    <string name="Resolved_By">Resolved By</string>
+    <string name="Date">Date</string>
+    <string name="Hour">Hour</string>
+    <string name="Rain_fall">Rain fall</string>
+    <string name="Max_Temperature">Max Temp</string>
+    <string name="Min_Temperature_deg_C">Min Temp</string>
+    <string name="Max_RelativeHumidity">Max Hum</string>
+    <string name="Min_RelativeHumidity">Min Hum</string>
+    <string name="Wind_Speed">Wind Speed</string>
+    <string name="Wind_Direction_deg_C">Wind Dire</string>
+    <string name="Role">Role</string>
+    <string name="Gender">Gender</string>
+    <string name="Registration">Registration</string>
+    <string name="Sub_domain">Sub domain</string>
+    <string name="Topic">Topic</string>
+    <string name="Sub_Topic">Sub Topic</string>
+    <string name="Time_applicable">Time_applicable</string>
+    <string name="Classification">Classification</string>
+    <string name="Title">Title</string>
+    <string name="Event_Type">Event Type</string>
+    <string name="Knowledge_domain">Knowledge domain</string>
+    <string name="Number_Of_Trainers">Number Of Trainers</string>
+    <string name="Genderr">Gender*</string>
+
+    <string name="Namee">Name*</string>
+    <string name="Enter_User_Name">Enter User Name</string>
+    <string name="Mobile_Number">Mobile Number</string>
+    <string name="Next">Next</string>
+    <string name="Register_as_Farmer">Register as Farmer</string>
+    <string name="Enter_Password">Enter Password</string>
+    <string name="Login">Login</string>
+    <string name="textpayment">A sum of Rs-1740(ONE THOUSAND SEVEN HUNDERD AND FORTH ONLY)has been received with thanks from
+    Mr/Mrs Usha Agarwal towards the payment of tax for the Assessment Year 2020-2021 as per the details given below.</string>
+    <string name="lfg">&#169;LGF</string>
+    <string name="line1">Please keep this Payment Receipt for future Reference.</string>
+    <string name="line2">Rs. 1000 penalty will applicable if citizen will not fill the SAF form (Penal Charge-1000).</string>
+    <string name="line3">Payment will be revised at the time of making payment (based on applicable discount).</string>
+    <string name="line4">You will Receive SMS in your Registered mobile no. for the paid amount. </string>
+    <string name="line5">If SMS is not received verify your paid amount by calling below number.</string>
+    <string name="line6">For Details please visit: https://kochasmunicipal.com or call us at 40747447.</string>
+    <string name="checkbox1">I/We hereby declare that the above information and property tax assesment based there one
+        is coreect to the best of my/our knowledge and belief and I/We undertake to abide by the relevant provisions
+        of the Bihar Municipal Act 2007.</string>
+    <string name="checkbox2">I/We fully understand that any informaition furnished above, if proved incorrect or false will
+        render me/us liable for penal action or other consequences as may be prescribed in Laws, Rules or Regulations
+        framed by Govt. of Bihar of Municipality.</string>
+    <string name="enter_4_digit_mpin">Enter 4 digit mpin</string>
+    <string name="confirm_4_digit_mpin">Confirm 4 digit mpin</string>
+    <string name="mpin_generated_successfully">M-Pin Successfully generated</string>
+
+    <string name="payment_confirm_checkbox_desc_1">I/We hereby declare that the above information and property tax assessment based there one is correct to the best of my/our knowledge and belief .</string>
+    <string name="payment_confirm_checkbox_desc_2">I/We fully understand that any informaition furnished above, if proved incorrect or false will render me/us liable for penal action or other consequences as may be prescribed in Laws, Rules or Regulations framed by Govt. .</string>
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="propertyModel"
+            type="com.example.municipal.model.PropertyDemand" />
+        <import type="com.example.municipal.util.DateTimeUtil"/>
+
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_box"
+    android:backgroundTint="@color/white"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay_deatail"
+        android:orientation="vertical">
+        <include layout="@layout/item_with_twotext_horizontal"
+            bind:levelText="@{`Holding Number`}"
+            bind:valueText="@{propertyModel.uniqueId}"
+            />
+        <include layout="@layout/item_with_twotext_horizontal"
+            bind:levelText="@{`Application Number`}"
+            bind:valueText="@{propertyModel.applicationNo}"
+
+            />
+        <include layout="@layout/item_with_twotext_horizontal"
+            bind:levelText="@{`District`}"
+            bind:valueText="@{propertyModel.address.districtCode}"
+
+            />
+        <include layout="@layout/item_with_twotext_horizontal"
+            bind:levelText="@{`Ward`}"
+            bind:valueText="@{propertyModel.address.wardCode}"
+
+            />
+        <include layout="@layout/item_with_twotext_horizontal"
+            bind:levelText="@{`Owner Name`}"
+            bind:valueText="@{propertyModel.ref.propertyOwner.size()>0?propertyModel.ref.propertyOwner.get(0).name:`NA`}"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mobilenoback"
+        android:paddingTop="@dimen/_4sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/lay_deatail"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:backgroundTint="#f2f3f7"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:id="@+id/laydot"
+            android:layout_gravity="center"
+            android:src="@drawable/icons8_eye"/>
+        <ImageView
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:id="@+id/bluethlyout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/icons8_print"/>
+        <ImageView
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:id="@+id/pdfdoenloadlayout"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/icons8_pdf"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="propertyModel"
+            type="com.example.municipal.model.PropertyDemand" />
+        <import type="com.example.municipal.util.DateTimeUtil"/>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_5sdp"
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/property_id"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Property`}"
+            bind:valueText="@{propertyModel.uniqueId}"
+            />
+        <include
+            android:id="@+id/name_of_municipality"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Name of Municipality`}"
+            bind:valueText="@{propertyModel.ref.municipalType.name}"
+            />
+        <include
+            android:id="@+id/Year_Of_Assessment"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Year Of Assessment`}"
+            bind:valueText="@{propertyModel.ref.yoa.name}"
+            />
+        <include
+            android:id="@+id/New_Holding_Number"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`New Holding Number`}"
+            bind:valueText="@{propertyModel.newHoldingNumber}"
+            />
+        <include
+            android:id="@+id/Old_Holding_Number"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Old Holding Number`}"
+            bind:valueText="@{propertyModel.oldHoldingNumber}"
+            />
+        <include
+            android:id="@+id/Property_Status"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Property Status`}"
+            bind:valueText="@{propertyModel.ref.propertyType.name}"
+            />
+        <include
+            android:id="@+id/Old_PID_Number"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Old PID Number`}"
+            bind:valueText="@{propertyModel.oldPID}"
+            />
+        <include
+            android:id="@+id/Road_On_which_Located"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Road On which Located`}"
+            bind:valueText="@{propertyModel.ref.roadType.name}"
+            />
+        <include
+            android:id="@+id/Date_Of_Acquisition"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Date Of Acquisition / Construction of Property`}"
+            bind:valueText="@{DateTimeUtil.INSTANCE.getDateOnly(propertyModel.doa)}"
+            />
+        <include
+            android:id="@+id/Area_Of_Plot"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Area Of Plot`}"
+            bind:valueText="@{propertyModel.areaOfPlot}"
+            />
+        <include
+            android:id="@+id/Build_Up_Area"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Build Up Area`}"
+            bind:valueText="@{propertyModel.builtUpArea}"
+            />
+        <include
+            android:id="@+id/Water_Connection"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Water Connection`}"
+            bind:valueText="@{propertyModel.municipalityWaterConnection}"
+            />
+        <include
+            android:id="@+id/Rai_Water_Harvesting"
+            layout="@layout/item_new_assesment"
+            bind:levelText="@{`Rain Water Harvesting`}"
+            bind:valueText="@{propertyModel.isRainWaterHarvesting}"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
