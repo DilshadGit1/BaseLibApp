@@ -61,91 +61,7 @@
         <item>Female</item>
     </string-array>
 
-    <string-array name="loginVia">
-        <item>Login Via</item>
-        <item>Via- UserID/Password</item>
-<!--        <item>Via- OTP</item>-->
-    </string-array>
-
-    <string-array name="yes_no">
-        <item>No</item>
-        <item>Yes</item>
-    </string-array>
-
-    <string-array name="preferred_markets">
-        <item>Select Preferred Markets</item>
-    </string-array>
-    <string-array name="assets">
-        <item>Select Productive Assets</item>
-    </string-array>
-    <string-array name="irrigation">
-        <item>--Select Land Type--</item>
-        <item>Irrigated</item>
-        <item>Rainfed</item>
-    </string-array>
-    <string-array name="area">
-        <item>acre</item>
-        <item>hectare</item>
-        <item>spmiter</item>
-        <item>dismil</item>
-    </string-array>
-
-    <string-array name="Season">
-        <item>--SelectSeason--</item>
-
-    </string-array>
-
-    <string-array name="yearly_income">
-        <item>Select Yearly Income</item>
-        <item>Below 50000</item>
-        <item>50000-1L</item>
-        <item>1L-2L</item>
-        <item>2L-4L</item>
-        <item>4L-6L</item>
-        <item>6L-10L</item>
-        <item>Above 10L</item>
-    </string-array>
-
-    <string-array name="education">
-    <item>Select Education</item>
-    <item>Illiterate</item>
-    <item>Literate</item>
-    <item>5th Pass</item>
-    <item>10th Pass</item>
-    <item>Intermediate</item>
-    <item>Graduate</item>
-    <item>Post Graduate</item>
-    <item>Doctorate</item>
-</string-array>
-
-
-
-    <string-array name="state">
-        <item>---Select State---</item>
-    </string-array>
-
-    <string-array name="district">
-        <item>---Select District---</item>
-    </string-array>
-
-    <string-array name="block">
-        <item>---Select Block---</item>
-    </string-array>
-    <string-array name="grampanchayat">
-        <item>---Select Grampanchayat---</item>
-    </string-array>
-    <string-array name="village">
-        <item>---Select Village---</item>
-    </string-array>
-
-
-    <string-array name="roadLocation">
-        <item>--Select Road On Which Located--</item>
-        <item>Principal Main Road</item>
-        <item>Others</item>
-        <item>Main Road</item>
-    </string-array>
-
+  
     <string-array name="water_connection">
         <item>--Select Water Connection--</item>
         <item>Yes</item>
@@ -158,31 +74,8 @@
         <item>Ms</item>
     </string-array>
 
-    <string-array name="payment_channel_title">
-        <item>--Select Payment Mode At--</item>
-        <item>Tax Collector</item>
-        <item>Citizen Window</item>
-    </string-array>
-
-    <string-array name="payment_mode_title">
-        <item>--Select Mode Of Payment--</item>
-        <item>Cash</item>
-        <item>Cheque</item>
-        <item>DD</item>
-        <item>Online Payment</item>
-    </string-array>
-
-    <string-array name="net_banking_type">
-        <item>Card</item>
-        <item>Net Banking</item>
-        <item>UPI</item>
-    </string-array>
-    <string-array name="net_banking_value">
-        <item>Card</item>
-        <item>Net Banking</item>
-        <item>UPI</item>
-    </string-array>
-
+   
+   
     <string-array name="status">
         <item>Active</item>
         <item>Pending</item>
