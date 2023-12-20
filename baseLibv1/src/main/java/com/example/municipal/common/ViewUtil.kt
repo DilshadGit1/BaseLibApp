@@ -17,7 +17,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import com.example.municipal.R
+import com.example.baselibv1.R
 import com.example.municipal.base.OnCustomClickListener
 import com.example.municipal.util.DateTimeUtil
 

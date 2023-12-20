@@ -3,7 +3,6 @@ package com.example.municipal.common
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.municipal.MainActivity2
 
 class ViewPagerAdapter(fragment: Fragment, var flist: List<Fragment>) :
     FragmentStateAdapter(fragment) {

@@ -1,6 +1,6 @@
 package com.example.municipal.data.network
 
-import com.example.municipal.BuildConfig
+import com.example.baselibv1.BuildConfig
 import com.example.municipal.model.RootResponse
 import com.google.gson.JsonObject
 import okhttp3.MultipartBody

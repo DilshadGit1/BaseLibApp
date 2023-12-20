@@ -39,7 +39,6 @@ data class Data (
     val paymentGateway: JsonElement,
     val hdfcPayment: JsonElement,
     val tradeLicense: JsonElement,
-    val uppi: PaytmTokenModel,
     val txtnId: String,
     val tnxId: String,
     val makePayment: JsonElement,

@@ -10,7 +10,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.core.content.ContextCompat
-import com.example.municipal.R
+import com.example.baselibv1.R
 
 
 class CustomSpinner : AppCompatSpinner {

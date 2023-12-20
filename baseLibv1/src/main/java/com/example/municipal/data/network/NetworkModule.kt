@@ -2,6 +2,7 @@ package com.example.municipal.data.network
 
 
 import android.util.Log
+import com.example.baselibv1.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -50,9 +51,9 @@ object NetworkModule {
     @Provides
     fun provideOkHttp():OkHttpClient{
         val interceptor =  HttpLoggingInterceptor();
-//        if(BuildConfig.DEBUG) {
+        if(BuildConfig.DEBUG) {
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//        }
+        }
         val okHttpClient=OkHttpClient.Builder().addInterceptor(interceptor)
         okHttpClient.connectTimeout(60, TimeUnit.SECONDS)
         okHttpClient.readTimeout(60, TimeUnit.SECONDS)

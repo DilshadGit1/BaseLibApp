@@ -14,10 +14,7 @@
         <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
         <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
-    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
-        <item name="android:textColor">@drawable/text_color_selector</item>
-        <item name="android:textSize">@dimen/_8sdp</item>
-    </style>
+
     <style name="NOTitle" parent="Theme.AppCompat.NoActionBar"></style>
 
     <style name="AppSpinner" parent="android:Widget.Spinner">
@@ -49,10 +46,7 @@
 
     </style>
     <style name="textViewCustom" >
-
         <item name="android:textSize">@dimen/_6sdp</item>
-
-
     </style>
 
 </resources>

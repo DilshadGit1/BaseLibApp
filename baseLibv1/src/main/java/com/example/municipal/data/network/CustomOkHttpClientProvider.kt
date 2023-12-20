@@ -1,7 +1,7 @@
 package com.example.municipal.data.network
 
 import android.content.Context
-import com.example.municipal.BuildConfig
+import com.example.baselibv1.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

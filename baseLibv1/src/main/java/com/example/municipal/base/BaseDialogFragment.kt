@@ -15,7 +15,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import androidx.viewbinding.ViewBinding
 import cn.pedant.SweetAlert.SweetAlertDialog
-import com.example.municipal.R
+import com.example.baselibv1.R
 import com.example.municipal.common.LoadingDialog
 
 

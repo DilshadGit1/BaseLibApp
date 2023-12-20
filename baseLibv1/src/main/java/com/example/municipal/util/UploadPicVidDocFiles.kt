@@ -15,7 +15,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
-import com.example.municipal.BuildConfig
+import com.example.baselibv1.BuildConfig
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
@@ -57,7 +57,7 @@ class UploadPicVidDocFiles {
                                 FilePath = finalPhotoFile.absolutePath
                                 val outputFileUri = FileProvider.getUriForFile(
                                     Objects.requireNonNull(activity),
-                                    BuildConfig.APPLICATION_ID.toString() + ".fileprovider",
+                                    activity.packageName + ".fileprovider",
                                     finalPhotoFile
                                 )
                                 val mimeTypes = arrayOf("image/jpeg", "image/png")

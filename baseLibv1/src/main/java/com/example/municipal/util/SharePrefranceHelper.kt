@@ -1,7 +1,7 @@
 package com.example.municipal.util
 
 import android.content.Context
-import com.example.municipal.R
+import com.example.baselibv1.R
 import com.example.municipal.model.ProductConfiguration
 
 class SharePrefranceHelper() {

@@ -1,8 +1,8 @@
 package com.example.municipal.common
 
 import android.content.Context
+import android.widget.ProgressBar
 import androidx.appcompat.app.AlertDialog
-import com.example.municipal.R
 
 class LoadingDialog {
 
@@ -10,10 +10,9 @@ class LoadingDialog {
         fun initLoadingDialog(context: Context): AlertDialog {
             val builder: AlertDialog.Builder = AlertDialog.Builder(context)
             builder.setCancelable(false) // if you want user to wait for some process to finish,
-
-            builder.setView(R.layout.layout_loading_dialog)
-            val dialog: AlertDialog = builder.create()
-            return dialog
+            val p = ProgressBar(context)
+            builder.setView(p)
+            return builder.create()
         }
     }
 

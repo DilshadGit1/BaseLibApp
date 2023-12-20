@@ -19,23 +19,21 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="BaseTheme" parent="android:Theme.Holo">
-        <item name="colorControlNormal">@color/white</item>
-        <item name="android:homeAsUpIndicator">@drawable/back_spalsh</item>
-    </style>
+
 
     <style name="AppTheme.AppBarOverlay.Theme"
         parent="Theme.Design.Light.BottomSheetDialog">
         <item name="appBarLayoutStyle">@style/AppModalStyle</item>
     </style>
 
-    <style name="AppModalStyle" parent="Widget.Design.AppBarLayout">
-        <item name="android:background">@drawable/dashboard</item>
-    </style>
+
 
     <style name="Theme.MyMuncipalApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MyMuncipalApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
 
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.AppBarLayout">
     </style>
 </resources>

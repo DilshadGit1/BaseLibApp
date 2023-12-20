@@ -5,7 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.municipal.R
+import com.example.baselibv1.R
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateInfo
 import com.google.android.play.core.appupdate.AppUpdateManager
@@ -107,7 +107,7 @@ class InAppUpdate(activity: Activity) : InstallStateUpdatedListener {
 
     private fun flexibleUpdateDownloadCompleted() {
         Snackbar.make(
-            parentActivity.findViewById(R.id.nav_view),
+            parentActivity.findViewById(android.R.id.text1),
             "An update has just been downloaded.",
             Snackbar.LENGTH_INDEFINITE
         ).apply {

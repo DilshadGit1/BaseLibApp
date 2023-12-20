@@ -13,11 +13,7 @@ data class Address(val no: String,
                    val khasraNo: String,
                    val postalCode: String,
                    val landmark: String,
-                   val state: State,
-                   val district: State,
-                   val village: State,
-                   val ward: State,
-                   val zone: State,
+
                    val location: Location)
 data class Location(
     val type: String,
