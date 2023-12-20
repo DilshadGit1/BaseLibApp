@@ -17,7 +17,6 @@
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        tools:replace="android:icon"
         tools:targetApi="m">
 <!--        <activity-->
 <!--            android:name=".TestActivity"-->
