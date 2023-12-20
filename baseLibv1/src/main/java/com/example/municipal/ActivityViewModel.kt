@@ -44,6 +44,7 @@ class ActivityViewModel @Inject constructor(private val apiServiceImpl: ApiServi
     var wardAccess: JsonArray?=null
     var userModel: User?=null
 
+
     private lateinit var apiInterface: RetrofitService
     fun getApiService(context: Context): RetrofitService {
         if(this::apiInterface.isInitialized && !MainApp.baseUrlChanged){
