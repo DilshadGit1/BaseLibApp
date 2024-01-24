@@ -1,9 +1,12 @@
 package com.example.baselibapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import com.dl.baselib.TestLib2
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.baselibapp.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.textView.text="Test"
 
-        TestLib2().print2(this)
+//        TestLib2().print2(this)
+
     }
+   
 }
