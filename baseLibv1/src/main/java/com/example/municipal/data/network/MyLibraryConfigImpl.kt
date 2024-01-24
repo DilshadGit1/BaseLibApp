@@ -1,3 +1,5 @@
 package com.example.municipal.data.network
 
-class MyLibraryConfigImpl(override val baseUrl: String) : MyLibraryConfig
+import javax.inject.Inject
+
+class MyLibraryConfigImpl @Inject constructor(override val baseUrl: String) : MyLibraryConfig
