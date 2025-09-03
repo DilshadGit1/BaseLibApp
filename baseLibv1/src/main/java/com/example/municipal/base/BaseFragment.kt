@@ -37,7 +37,6 @@ import com.example.baselibv1.R
 import com.example.municipal.ActivityViewModel
 import com.example.municipal.common.LoadingDialog
 import com.example.municipal.data.network.BaseResponse
-import com.example.municipal.util.AclHelper
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -71,10 +70,7 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes val layoutId: Int) :
 
     lateinit var  loadingDialog: AlertDialog
 
-    //    val baseViewModel: BaseViewModel by viewModels()
-    var loadbarCount=0
 
-    lateinit var aclHelper: AclHelper
 
     private val INTERVAL = (1000 * 10).toLong()
     private val FASTEST_INTERVAL = (1000 * 5).toLong()
@@ -127,7 +123,7 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes val layoutId: Int) :
         loadingDialog= LoadingDialog.initLoadingDialog(requireContext())
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(requireContext())
 
-        aclHelper=AclHelper(baseViewModel.accessModel)
+//        aclHelper=AclHelper(baseViewModel.accessModel)
 
         loadDataFromSP()
         initLocationUpdateListener()

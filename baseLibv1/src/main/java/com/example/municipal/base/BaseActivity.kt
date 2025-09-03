@@ -1,6 +1,7 @@
 package com.example.municipal.base
 
 import android.Manifest
+import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Window
@@ -13,10 +14,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.viewbinding.ViewBinding
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.example.baselibv1.R
-import com.example.municipal.ActivityViewModel
 import com.example.municipal.common.LoadingDialog
 import com.example.municipal.model.User
+import com.example.municipal.util.InAppUpdateHelper
 import com.permissionx.guolindev.PermissionX
 
 
@@ -39,12 +41,13 @@ abstract class BaseActivity<T>(@LayoutRes val layoutId: Int)  :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
         sp=getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE)
-        loadSpData()
+
         this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         binding = DataBindingUtil.setContentView(this@BaseActivity, layoutId) as T
         binding.lifecycleOwner = this
-
+        InAppUpdateHelper.attach(this)
         loadingDialog= LoadingDialog.initLoadingDialog(this)
 //        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         addObservers()
@@ -53,10 +56,7 @@ abstract class BaseActivity<T>(@LayoutRes val layoutId: Int)  :
         onInitialized()
 
     }
-    private fun loadSpData(){
-        login_userName=sp.getString("login_userName","")?:""
-        login_userType=sp.getString("login_userType","")?:""
-    }
+
     private fun checkPermission(){
         PermissionX.init(this)
             .permissions(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -87,6 +87,49 @@ abstract class BaseActivity<T>(@LayoutRes val layoutId: Int)  :
 
     fun showToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
+    fun showSimpleDialog( msg: String){
+        customDialog2(SweetAlertDialog.NORMAL_TYPE,"Alert",msg,-1,false,null)
+    }
+    fun customDialog(alertType:Int,title:String, msg: String,id:Int,showCancelBtn:Boolean,onDialogInterface: DialogInterface.OnClickListener?){
+        val dialog= SweetAlertDialog(this, alertType)
+            .setTitleText(title)
+            .setContentText(msg)
+            .setConfirmText("OK")
+            .setConfirmClickListener {
+                    sDialog -> sDialog.dismissWithAnimation()
+                if(onDialogInterface!=null) {
+                    onDialogInterface.onClick(sDialog, id)
+                }
+            }
+        if(showCancelBtn){
+            dialog.cancelText = "Cancel"
+            dialog.setCancelClickListener(){
+                    sDialog -> sDialog.dismissWithAnimation()
+            }
+        }
+        dialog.setCancelable(false)
+        dialog.show()
+    }
+
+    private fun customDialog2(alertType:Int,title:String, msg: String,id:Int,showCancelBtn:Boolean,onDialogInterface: DialogInterface.OnClickListener?){
+        val dialog= SweetAlertDialog(this, alertType)
+            .setTitleText(title)
+            .setContentText(msg)
+            .setConfirmText("OK")
+            .setConfirmClickListener {
+                    sDialog -> sDialog.dismissWithAnimation()
+                if(onDialogInterface!=null) {
+                    onDialogInterface.onClick(sDialog, id)
+                }
+            }
+        if(showCancelBtn){
+            dialog.cancelText = "Cancel"
+            dialog.setCancelClickListener(){
+                    sDialog -> sDialog.dismissWithAnimation()
+            }
+        }
+        dialog.show()
     }
 
     override fun onDestroy() {
