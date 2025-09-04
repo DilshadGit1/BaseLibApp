@@ -7,7 +7,8 @@ import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.baselibapp.databinding.ActivityMainBinding
+import com.dilshad.android.baselibapp.R
+import com.dilshad.android.baselibapp.databinding.ActivityMainBinding
 import com.example.baselibapp.ui.adapter.InfoAdapter
 import com.example.baselibapp.ui.main.MainViewModel
 import com.example.municipal.base.BaseActivity

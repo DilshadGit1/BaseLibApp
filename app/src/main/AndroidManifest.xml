@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:name=".UniversalApp"
+        android:name="com.example.baselibapp.UniversalApp"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.baselibapp.MainActivity"
             android:exported="true">
 
             <intent-filter>

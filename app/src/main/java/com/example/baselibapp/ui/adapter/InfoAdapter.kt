@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
-import com.example.baselibapp.R
+import com.dilshad.android.baselibapp.R
+import com.dilshad.android.baselibapp.databinding.ItemInfoBinding
 import com.example.baselibapp.data.model.InfoItem
-import com.example.baselibapp.databinding.ItemInfoBinding
+
 
 class InfoAdapter(private val items: List<InfoItem>) :
     RecyclerView.Adapter<InfoAdapter.InfoViewHolder>() {

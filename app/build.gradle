@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.baselibapp'
+    namespace 'com.dilshad.android.baselibapp'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.example.baselibapp"
+        applicationId "com.dilshad.android.baselibapp"
         minSdk 24
         targetSdk 35
         versionCode 2
