@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.dilshad.android.baselibapp'
+    namespace 'com.dilshad.android.libmain'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.dilshad.android.baselibapp"
+        applicationId "com.dilshad.android.libmain"
         minSdk 24
         targetSdk 35
         versionCode 2
@@ -73,4 +73,6 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:2.49"
     kapt "com.google.dagger:hilt-compiler:2.49"
+
+
 }
