@@ -9,6 +9,6 @@ class UniversalApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        LibInitializer.init(this,"12345","https://stage.logikoof.orc/api/")
+        LibInitializer.init(this, baseUrl = "https://stage.logikoof.orc/api/")
     }
 }

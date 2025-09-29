@@ -57,7 +57,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.action_refresh -> {
-                    customDialog(SweetAlertDialog.NORMAL_TYPE,"Alert","Do you want to logout?",0,false) {_,_->
+                    customDialog(SweetAlertDialog.NORMAL_TYPE,"Alert","Do you want to logout?",0,true) {_,_->
                         logout() // or viewModel.fetchDashboard()
                     }
 

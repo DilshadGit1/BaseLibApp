@@ -1,11 +1,16 @@
 package com.dilshad.apifallback.ui
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
+import android.provider.CalendarContract
 import android.util.Log
 import android.view.Gravity
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.dilshad.apifallback.utils.LibConstants
 import com.dilshad.backupdashboard.SplashActivity
@@ -28,12 +33,35 @@ class DefaultLauncherActivity : AppCompatActivity() {
             progressBar = ProgressBar(this@DefaultLauncherActivity).apply {
                 isIndeterminate = true
                 layoutParams = FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT,
+                )
+
+            }
+            val liner= LinearLayout(this@DefaultLauncherActivity).apply {
+                layoutParams = FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT,
                     Gravity.CENTER
                 )
+
+                orientation= LinearLayout.VERTICAL
             }
-            addView(progressBar)
+
+            val tv= TextView(this@DefaultLauncherActivity).apply {
+                text="Loading please wait..."
+                textSize=14f
+                layoutParams = FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    Gravity.CENTER
+                )
+                gravity= Gravity.CENTER_HORIZONTAL
+            }
+            tv.setTextColor(Color.BLACK)
+            liner.addView(progressBar)
+            liner.addView(tv)
+            addView(liner)
         })
 
         handleLaunch()
