@@ -9,12 +9,20 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
+
         >
-        <activity android:name="com.dilshad.backupdashboard.login.LoginActivity"/>
-        <activity android:name="com.dilshad.apifallback.ui.DefaultLauncherActivity"/>
-        <activity android:name="com.dilshad.backupdashboard.MainActivity"/>
-        <activity android:name="com.dilshad.backupdashboard.SplashActivity"/>
+        <activity android:name="com.dilshad.backupdashboard.login.LoginActivity"
+            android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
+            />
+        <activity android:name="com.dilshad.apifallback.ui.DefaultLauncherActivity"
+            android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
+            />
+        <activity android:name="com.dilshad.backupdashboard.MainActivity"
+            android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
+            />
+        <activity android:name="com.dilshad.backupdashboard.SplashActivity"
+            android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
+            />
     </application>
 
 

@@ -7,7 +7,7 @@ import android.content.SharedPreferences
 // This centralizes all logic for saving and retrieving key-value pairs.
 object PreferenceManager {
 
-    private const val PREF_NAME = "login_pref"
+    private const val PREF_NAME = "lib_login_pref"
     private const val KEY_IS_LOGGED_IN = "is_logged_in"
 
     private lateinit var sharedPreferences: SharedPreferences
