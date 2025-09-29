@@ -19,7 +19,7 @@ object LibInitializer {
 
     private var cachedData: JsonObject? = null
 
-    fun init(appContext: android.content.Context,appId: String,baseUrl: String) {
+    fun init(appContext: Context,appId: String=appContext.packageName,baseUrl: String) {
         // Get Repository via Hilt manually (since object is not @AndroidEntryPoint)
         val entryPoint = EntryPointAccessors.fromApplication(
             appContext,
