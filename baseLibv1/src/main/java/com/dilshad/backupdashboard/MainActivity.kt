@@ -1,10 +1,12 @@
 package com.dilshad.backupdashboard
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.dilshad.android.baselib.R
 import com.dilshad.android.baselib.databinding.ActivityMainBinding
 import com.dilshad.backupdashboard.login.LoginActivity
@@ -52,26 +54,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     }
 
     override fun setUpClicks() {
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_refresh -> {
+                    customDialog(SweetAlertDialog.NORMAL_TYPE,"Alert","Do you want to logout?",0,false) {_,_->
+                        logout() // or viewModel.fetchDashboard()
+                    }
 
-    }
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.dashboard_menu, menu)
-        return true
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_refresh -> {
-                // 👉 Handle button click here
-//                Toast.makeText(this, "Refresh clicked!", Toast.LENGTH_SHORT).show()
-
-                // Example: call your refresh function
-                logout()
-
-                true
+                    true
+                }
+                else -> false
             }
-            else -> super.onOptionsItemSelected(item)
         }
     }
+
 
     private fun logout() {
         // Your refresh logic goes here

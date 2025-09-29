@@ -18,7 +18,6 @@
             android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
             />
         <activity android:name="com.dilshad.backupdashboard.MainActivity"
-            android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"
             />
         <activity android:name="com.dilshad.backupdashboard.SplashActivity"
             android:theme="@style/Theme.MyMuncipalApplication.NoActionBar"

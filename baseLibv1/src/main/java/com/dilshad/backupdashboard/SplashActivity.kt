@@ -28,8 +28,13 @@ class SplashActivity : AppCompatActivity() {
             delay(3000)
 
             // Create an Intent to navigate to the LoginActivity.
-            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
-            startActivity(intent)
+            if(!PreferenceManager.isLoggedIn()) {
+                val intent = Intent(this@SplashActivity, LoginActivity::class.java)
+                startActivity(intent)
+            }else{
+                val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                startActivity(intent)
+            }
 
             // Finish the splash activity so the user cannot navigate back to it.
             finish()
