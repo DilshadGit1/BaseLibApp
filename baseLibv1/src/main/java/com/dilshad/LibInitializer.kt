@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 import com.dilshad.apifallback.ApiFallbackHelper
 import com.dilshad.apifallback.utils.LibConstants
+import com.dilshad.appInfoSdk.AppInfoSDK
 import com.dilshad.backupdashboard.SplashActivity
 import com.dilshad.libconfig.data.model.ProductConfig
 import com.google.gson.Gson
@@ -37,6 +38,9 @@ object LibInitializer {
                 }
                 apiFallBackHandle(appContext,baseUrl)
                 Log.d("LibInitializer", "✅ Preloaded: $pd")
+
+                //info sdk init
+                AppInfoSDK.init(appContext)
             } catch (e: Exception) {
                 Log.e("LibInitializer", "❌ Error: ${e.message}")
             }

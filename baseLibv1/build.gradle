@@ -14,7 +14,7 @@ namespace 'com.dilshad.android.baselib'
         minSdk 21
         targetSdk 35
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //        buildConfigField "String", "BASE_URL", '"http://m-report.logikoof.in/api/"'
@@ -132,7 +132,8 @@ dependencies {
     // Lottie
     implementation "com.airbnb.android:lottie:6.6.6"
 
-
+    //
+    implementation "com.google.android.play:integrity:1.4.0"
 
 
 }
