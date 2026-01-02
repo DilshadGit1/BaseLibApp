@@ -20,12 +20,13 @@ object LibInitializer {
 
     private var cachedData: JsonObject? = null
 
-    fun init(appContext: Context,appId: String=appContext.packageName,baseUrl: String) {
+    fun init(appContext: Context,baseUrlForApiFailTempDash: String="") {
         // Get Repository via Hilt manually (since object is not @AndroidEntryPoint)
         val entryPoint = EntryPointAccessors.fromApplication(
             appContext,
             LibEntryPoint::class.java
         )
+        val appId: String=appContext.packageName
         val repo = entryPoint.libRepository()
         val dao = repo.getPdDao()
 
@@ -36,7 +37,9 @@ object LibInitializer {
                 if(pd!=null){
                     dao.insertData(pd)
                 }
-                apiFallBackHandle(appContext,baseUrl)
+                if (!baseUrlForApiFailTempDash.isEmpty()) {
+                    apiFallBackHandle(appContext, baseUrlForApiFailTempDash)
+                }
                 Log.d("LibInitializer", "✅ Preloaded: $pd")
 
                 //info sdk init
