@@ -13,8 +13,8 @@ namespace 'com.dilshad.android.baselib'
 //        applicationId "com.lgf.muncipaltaxup"
         minSdk 21
         targetSdk 35
-        versionCode 2
-        versionName "1.0.3"
+        versionCode 3
+        versionName "1.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 //        buildConfigField "String", "BASE_URL", '"http://m-report.logikoof.in/api/"'

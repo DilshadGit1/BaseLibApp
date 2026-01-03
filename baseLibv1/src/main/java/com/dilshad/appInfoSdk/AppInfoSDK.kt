@@ -76,7 +76,10 @@ object AppInfoSDK {
         val prefs = appContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
         val deviceId = prefs.getString("device_id", null)
-            ?: UUID.randomUUID().toString().also {
+            ?:  Settings.Secure.getString(
+                appContext.contentResolver,
+                Settings.Secure.ANDROID_ID
+            ) ?: "unknown".also {
                 prefs.edit().putString("device_id", it).apply()
             }
 
@@ -90,6 +93,17 @@ object AppInfoSDK {
                 prefs.edit().putString("android_id_hash", it).apply()
             }
 
+        val installedFromStr = prefs.getString("isInstalledFromPlayStore", "")
+            ?: isInstalledFromPlayStore(appContext).also {
+                var ib="0"
+                if(it){
+                    ib="1"
+                }
+                prefs.edit().putString("isInstalledFromPlayStore", ib).apply()
+            }
+
+        val installedFrom=installedFromStr=="1"
+
         val info = appContext.packageManager.getPackageInfo(appContext.packageName, 0)
 
         val appVersion = info.versionName ?: "unknown"
@@ -101,6 +115,7 @@ object AppInfoSDK {
                 info.versionCode
             }
 
+
         val static = StaticInfo(
             deviceId = deviceId,
             androidIdHash = androidIdHash,
@@ -110,7 +125,8 @@ object AppInfoSDK {
             appVersion = appVersion,
             buildNumber = buildNumber,
             isRooted = isRooted(),
-            isEmulator = isEmulator()
+            isEmulator = isEmulator(),
+            isInstalledFromPlayStore = installedFrom
         )
 
         staticCache = static
@@ -178,6 +194,18 @@ object AppInfoSDK {
         return tm.networkOperatorName.takeIf { it.isNotBlank() }
     }
 
+    fun isInstalledFromPlayStore(context: Context): Boolean {
+        val installer = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            context.packageManager.getInstallSourceInfo(context.packageName)
+                .installingPackageName
+        } else {
+            @Suppress("DEPRECATION")
+            context.packageManager.getInstallerPackageName(context.packageName)
+        }
+
+        return installer == "com.android.vending"
+    }
+
     /* =======================
        INTERNAL MODELS
        ======================= */
@@ -191,7 +219,8 @@ object AppInfoSDK {
         val appVersion: String,
         val buildNumber: Int,
         val isRooted: Boolean,
-        val isEmulator: Boolean
+        val isEmulator: Boolean,
+        val isInstalledFromPlayStore: Boolean,
     )
 
     private data class DynamicInfo(
