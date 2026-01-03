@@ -6,11 +6,13 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 
 @Module
 @InstallIn(SingletonComponent::class)
 object MyLibraryModule {
 
+    @Named("dllibretrofit")
     @Provides
     fun provideRetrofit(myLibraryConfig: MyLibraryConfig): Retrofit {
         return Retrofit.Builder()

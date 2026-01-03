@@ -18,17 +18,19 @@ import javax.inject.Named
 object NetworkModule {
 
     @Provides
+    @Named("dl_lib_HttpLogInterceptor")
     fun provideLoggingInterceptor() = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
 
     @Provides
-    fun provideOkHttp(logging: HttpLoggingInterceptor): OkHttpClient =
+    @Named("dl_lib_OkHttpClient")
+    fun provideOkHttp(@Named("dl_lib_HttpLogInterceptor") logging: HttpLoggingInterceptor): OkHttpClient =
         OkHttpClient.Builder().addInterceptor(logging).build()
 
     @Provides
-    @Named("weather")
-    fun provideWeatherRetrofit(client: OkHttpClient): Retrofit =
+    @Named("dl_lib_weather")
+    fun provideWeatherRetrofit(@Named("dl_lib_OkHttpClient")client: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl("https://api.open-meteo.com/")
             .client(client)
@@ -36,7 +38,7 @@ object NetworkModule {
             .build()
 
     @Provides
-    @Named("dashboard")
+    @Named("dl_lib_dashboard")
     fun provideDashboardRetrofit(client: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl("http://demo4245897.mockable.io/")
@@ -45,14 +47,17 @@ object NetworkModule {
             .build()
 
     @Provides
-    fun provideWeatherApi(@Named("weather") retrofit: Retrofit): WeatherApi =
+    @Dl_lib_Apis
+    fun provideWeatherApi(@Named("dl_lib_weather") retrofit: Retrofit): WeatherApi =
         retrofit.create(WeatherApi::class.java)
 
     @Provides
-    fun provideDashboardApi(@Named("dashboard") retrofit: Retrofit): DashboardApi =
+    @Dl_lib_Apis
+    fun provideDashboardApi(@Named("dl_lib_dashboard") retrofit: Retrofit): DashboardApi =
         retrofit.create(DashboardApi::class.java)
 
     @Provides
-    fun providePCApi(@Named("dashboard") retrofit: Retrofit): ProductConfigApi =
+    @Dl_lib_Apis
+    fun providePCApi(@Named("dl_lib_dashboard") retrofit: Retrofit): ProductConfigApi =
         retrofit.create(ProductConfigApi::class.java)
 }
