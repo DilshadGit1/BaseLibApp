@@ -60,6 +60,7 @@ object AppInfoSDK {
             buildNumber = static.buildNumber,
             isRooted = static.isRooted,
             isEmulator = static.isEmulator,
+            isInstalledFromPlayStore=static.isInstalledFromPlayStore,
             networkType = dynamic.networkType,
             carrier = dynamic.carrier,
             country = dynamic.country
@@ -252,6 +253,7 @@ data class AppInfoPayload(
     val buildNumber: Int,
     val isRooted: Boolean,
     val isEmulator: Boolean,
+    val isInstalledFromPlayStore: Boolean,
     val networkType: String,
     val carrier: String?,
     val country: String
