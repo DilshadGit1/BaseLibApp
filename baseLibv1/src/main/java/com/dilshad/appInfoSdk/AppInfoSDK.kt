@@ -37,15 +37,20 @@ object AppInfoSDK {
             preloadStaticInfo()
         }
     }
+    private fun ensureInit(context: Context) {
+        if (::appContext.isInitialized && isInitialized.get()) return
+        init(context.applicationContext)
+    }
 
     /* =======================
        PUBLIC API
        ======================= */
 
-    fun collect(): AppInfoPayload {
-        check(::appContext.isInitialized) {
-            "AppInfoSDK not initialized. Call AppInfoSDK.init(applicationContext)"
-        }
+    fun collect(mContext: Context): AppInfoPayload {
+//        check(::appContext.isInitialized) {
+//            "AppInfoSDK not initialized. Call AppInfoSDK.init(applicationContext)"
+//        }
+        ensureInit(mContext)
 
         val static = staticCache ?: preloadStaticInfo()
         val dynamic = getDynamicInfo()
