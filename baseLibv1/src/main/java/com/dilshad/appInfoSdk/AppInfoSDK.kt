@@ -238,8 +238,8 @@ object AppInfoSDK {
     /**
      * Returns AppInfoPayload as Gson JsonObject
      */
-    fun collectAsJsonObject(): JsonObject {
-        val payload = collect()
+    fun collectAsJsonObject(context: Context): JsonObject {
+        val payload = collect(context)
         return gson.toJsonTree(payload).asJsonObject
     }
 }
