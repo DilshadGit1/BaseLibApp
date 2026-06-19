@@ -39,7 +39,7 @@ object NetworkModule {
 
     @Provides
     @Named("dl_lib_dashboard")
-    fun provideDashboardRetrofit(client: OkHttpClient): Retrofit =
+    fun provideDashboardRetrofit(@Named("dl_lib_OkHttpClient") client: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl("http://demo4245897.mockable.io/")
             .client(client)
